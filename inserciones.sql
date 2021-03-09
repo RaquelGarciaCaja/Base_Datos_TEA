@@ -1,179 +1,186 @@
 USE BDTEA;
 
 
--- tabla grado I
-INSERT INTO 100_TIPODEPROFESIONALES
-	(100_idProfesional, 100_dniProfesional, 100_nomProfesional,  100_foto, 100_sueldoBrutoAnual)
+
+INSERT INTO `100_TIPO_DE_PROFESIONALES`
+	( 100_idProfesional, 100_dniProfesional, 100_nomProfesional, 100_fechaNacimiento, 100_nomFichero, 100_sueldoBrutoAnual, 100_sexo )
 VALUES 
-	( null, "00000001A", "María", 		"img/001.png", "20000,00"),
-	( null, "00000002A", "Alejandro", 	"img/002.png", "20000,00"),
-	( null, "00000003A", "Fernando", 	"img/003.png", "20000,00"),
-	( null, "00000004A", "Rocio", 		"img/004.png", "20000,00"),
-	( null, "00000005A", "Gerardo",		"img/005.png", "20000,00"),
-	( null, "00000006A", "Gonzalo",		"img/006.png", "20000,00");
+	( null, 				"00000001A",			"María",			"1990-05-01", 		"img/001.png", 		"22000.00",			"0"),
+	( null, 				"00000002A",			"Alejandro", 		"1982-02-25",		"img/002.png", 		"25000.00", 		"1"),
+	( null, 				"00000003A",			"Josefa",			"1985-10-14", 		"img/003.png", 		"26000.00",			"0"),
+	( null, 				"00000004A",			"Rocío",			"1978-08-26", 		"img/004.png", 		"24000.00",			"0");
 	
-
-INSERT INTO 200_PERSONASCONTEA
-	( 200_idPersonaTea, 200_nombre, 200_apellido, 200_foto)
+	
+	
+INSERT INTO `200_PERSONAS_CON_TEA`
+	( 200_idPersonaTea, 200_nombre, 200_apellido, 200_fechaNacimiento, 200_nomFichero, 200_sexo )
 VALUES 	
+	( null, 			"David", 	"Domínguez",		 "2015-05-11", 	"img/007.png", 		"1" 	),
+	( null, 			"Teresa", 	"Rodríguez",		 "2016-11-25", 	"img/008.png", 		"0" 	),
+	( null, 			"Adrián", 	"Fernández",		 "2015-12-30", 	"img/009.png", 		"1" 	),
+	( null, 			"Alberto", 	"Martínez",			 "2018-01-27", 	"img/010.png", 		"1" 	);
 	
-	( null, "David", 	"Domínguez", 	"img/007.png"),
-	( null, "Laura", 	"López", 		"img/008.png"),
-	( null, "Sergio", 	"Sánchez", 		"img/009.png"),
-	( null, "Pedro", 	"Pérez", 		"img/010.png"),
-	( null, "Raúl", 	"Ruiz",			"img/011.png"),
-	( null, "Héctor", 	"Hernández",	"img/012.png");
 
-
-INSERT INTO 300_GRADOS
+	
+INSERT INTO `300_GRADOS`
 	( 300_idGrado, 300_grado )
 VALUES 	
-	
 	( null, 	"Grado I" 	),  
 	( null,		"Grado II"	),
 	( null,	 	"Grado III"	);
 	
 	
 	
-INSERT INTO 400_PROBLEMAS
-	( 400_idProblema, 400_nomProblema )
+INSERT INTO `400_PROBLEMAS`
+	( 400_idProblema, 400_nomProblema, 400_descripcion )
 VALUES 	
+	( null, 	"Inflexibilidad", 			"blabla" ),  
+	( null,		"Lenguaje", 				"blabla" ),
+	( null, 	"Comunicación", 			"blabla" ),  
+	( null,		"Esteriotipias", 			"blabla" ),
+	( null,		"Sensibilida táctil", 		"blabla" ),
+	( null,	 	"Sensibilida auditiva",		"blabla" );
+
 	
-	( null, 	"Inflexibilidad" ),  
-	( null,		"Lenguaje"	),
-	( null, 	"Actividades diarias" ),  
-	( null,		"Sensibilidad auditiva"	),
-	( null,		"Sensibilidad táctil"	)
-	( null,	 	"Comunicación"	);
-	
-INSERT INTO 500_ACTIVIDADES
-	(500_idActividad, 500_nomActividad)
+INSERT INTO `500_ACTIVIDADES`
+	( 500_idActividad, 500_nomActividad, 500_descripcion)
 VALUES 
 	
-	( null, "Puzzles" ),
-	( null, "Figura-fondo" ),
-	( null, "Uso de pictogramas" ),
-	( null, "Visuales"),
-	( null, "Visuo-espaciales"),
-	( null, "Jegos con diferentes texturas"),
-	( null, "Ordenar rutinas" );
-	
+	( null,	 "puzzles", 						"blabla"  ),
+	( null,	 "Comprensión lectora",				"blabla"  ),
+	( null,	 "Uso de pictos", 					"blabla"  ),
+	( null,	 "Juegos con texturas y ruidos", 	"blabla"  );	
 	
 
 	
-	
-	-- tabla grado II
-	
-INSERT INTO 110_ACTIVIDADESPROFESIONALES
+
+INSERT INTO `110_ACTIVIDADES_PROFESIONALES`
 	( 100_idProfesional, 500_idActividad )
 VALUES 
 		( 1,				1),
 		( 1, 				2),
 		( 1, 				3),
-		( 1,				4),			
-		( 1, 				5),			
-		( 2,				1),
-		( 2, 				2),
-		( 2, 				3),
+		
+		
+		( 2, 				1),
+		
+		
+		
+		( 3, 				1),
 		( 3, 				2),
-		( 3, 				5),
+		( 3, 				3),
+		( 3, 				4),
+		
+		
+		( 4, 				1),
 		( 4, 				2),
-		( 4, 				4),
-		( 5, 				5),
-		( 5, 				2),
-		( 6, 				4),
-		( 7, 				5);	
+		( 4, 				3),
+		( 4, 				4);
+	
+		
 
 
---duda el tiempo estimado. Cómo determino si es mensual, semanal...??
-INSERT INTO 210_ACTIVIDADESTEA
-	( 500_idActividad, 200_idPersonaTea, 210_tiempoEstimadoHoras )
+
+
+INSERT INTO `210_ACTIVIDADES_TEA`
+	( 500_idActividad, 200_idPersonaTea )
 VALUES 
-		( 1,				1, 01:00:00),
-		( 1, 				2, 01:00:00),
-		( 1, 				3, 01:00:00),
-		( 1,				4, 01:00:00),			
-		( 1, 				5, 01:00:00),			
-		( 2,				1, 01:00:00),
-		( 2, 				2, 01:00:00),
-		( 2, 				3, 01:00:00),
-		( 3, 				2, 01:00:00),
-		( 3, 				5, 01:00:00),
-		( 4, 				2, 01:00:00),
-		( 4, 				4, 01:00:00),
-		( 5, 				5, 01:00:00),
-		( 5, 				2, 01:00:00),
-		( 5, 				4, 01:00:00);
+		( 1,				1),
+		( 2,				1),
+		( 3,				1),
+				
+		( 1,				2),
+		
+		
+		( 1,				3),
+		( 2,				3),
+		( 3,				3),
+		( 4,				3),
+	
+		( 1,				4),
+		( 2,				4),
+		( 3,				4),
+		( 4,				4);
 
 
-
-
-INSERT INTO 410_ACTIVIDADESTEA
-	( 400_idProblema, 200_idPersonaTea, 410_fechaInicioidProblemas )
+INSERT INTO `410_TEA_PROBLEMAS`
+	( 400_idProblema, 200_idPersonaTea, 410_fechaInicioProblema )
 VALUES 
-		( 1,				1, 2009-05-03),
-		( 1, 				2, 2011-07-07),
-		( 1, 				3, 2011-02-22),
-		( 1,				4, 2014-10-13),			
-		( 1, 				5, 2012-09-18),			
-		( 2,				1, 2011-08-09),
-		( 2, 				2, 2013-04-11),
-		( 2, 				3, 2015-01-29),
-		( 3, 				2, 2017-07-30),
-		( 3, 				5, 2019-06-27),
-		( 4, 				2, 2018-12-28),
-		( 4, 				4, 2019-11-23),
-		( 5, 				5, 2019-11-23),
-		( 5, 				2, 2020-11-23),
-		( 5, 				4, 2012-11-23);
+		( 1,				1, 			"2018-05-01"),
+		( 2, 				1,			"2017-06-01"),			
+		( 3,				1, 			"2017-05-01"),
+		
+		( 1,				2, 			"2018-11-01"),
+		
+		( 1, 				3,			"2016-10-01"),			
+		( 2,				3, 			"2016-04-01"),
+		( 3, 				3,			"2016-10-01"),			
+		( 4,				3, 			"2016-04-01"),
+		( 5, 				3,			"2016-10-01"),
+		
+		( 1,				4, 			"2018-03-01"),
+		( 2, 				4,			"2018-11-01"),			
+		( 3,				4, 			"2018-04-01"),
+		( 4, 				4,			"2018-04-01"),			
+		( 5,				4, 			"2018-12-01"),
+		( 6, 				4,			"2018-08-01");
+		
 
 
-
-
-
-INSERT INTO 211_ACTIVIDADESTEAPROFESIONALES
-	( 100_idProfesional, 500_idActividad, 200_idPersonaTea, 211_notas, 211_duracionMinutos)
+INSERT INTO `211_ACTIVIDADES_TEA_PROFESIONALES`
+	( 100_idProfesional, 500_idActividad, 200_idPersonaTea, 211_fechaHoraRealizacion, 211_descripcion, 211_gradoSatisfaccion  )
 VALUES 
-		( 1,	1,	1,	"blabla", 01:00:00),
-		( 1,	1,	2,	"blabla", 01:00:00),
-		( 1,	2,	3,	"blabla", 01:00:00),
-		( 1,	2,	4,	"blabla", 01:00:00),			
-		( 1,	3,	5,	"blabla", 01:00:00),			
-		( 2,	4,	1, 	"blabla", 01:00:00),
-		( 2,	4,	2, 	"blabla", 01:00:00),
-		( 2,	5,	3, 	"blabla", 01:00:00),
-		( 3,	5,	2, 	"blabla", 01:00:00),
-		( 3,	4,	5, 	"blabla", 01:00:00),
-		( 4,	1,	2, 	"blabla", 01:00:00),
-		( 4,	2,	4, 	"blabla", 01:00:00),
-		( 5,	7,	5, 	"blabla", 01:00:00),
-		( 5,	6,	2, 	"blabla", 01:00:00),
-		( 6,	5,	4, 	"blabla", 01:00:00),
-		( 7,	4,	5, 	"blabla", 01:00:00);	
+		
+
+		( 1,				1,				1,				"2020-01-07 09:00:00",		 "blabla",			"5"),
+		( 1, 				2,				1,				"2020-01-14 09:00:00",		 "blabla",			"5"),
+		( 1, 				3,				1,				"2020-01-21 09:00:00",		 "blabla",			"5"),
+					
+		
+		( 2, 				1,				2,				"2020-05-07 10:00:00",		 "blabla",			"5"),
+		
+		
+		( 3, 				1,				3,				"2020-06-07 16:00:00",		 "blabla",			"3"),
+		( 3, 				2,				3,				"2020-06-14 16:00:00",		 "blabla",			"3"),
+		( 3, 				3,				3,				"2020-06-21 16:00:00",		 "blabla",			"3"),
+		( 3, 				4,				3,				"2020-06-28 16:00:00",		 "blabla",			"3"),
+		
+		
+		( 4, 				1,				4,				"2020-11-07 17:00:00",		 "blabla",			"4"),
+		( 4, 				2,				4,				"2020-11-14 17:00:00",		 "blabla",			"4"),
+		( 4, 				3,				4,				"2020-11-21 17:00:00",		 "blabla",			"4"),
+		( 4, 				4,				4,				"2020-11-28 17:00:00",		 "blabla",			"4");
+		
 
 
 
 
-
-INSERT INTO 411_TEAPROBLEMASGRADO
-	( 411_fecha, 400_idProblema, 200_idPersonaTea, 300_idGrado )
+	
+INSERT INTO `411_TEA_PROBLEMAS_GRADO`
+	( 400_idProblema, 200_idPersonaTea, 411_fechaReevaluacion, 300_idGrado )
 VALUES 
-		(2011-05-03, 1,			1, 1),
-		(2012-05-03, 1, 		2, 2),
-		(2014-05-03, 1, 		3, 2),
-		(2015-05-03, 1,			4, 3),			
-		(2015-05-03, 1, 		5, 3),			
-		(2016-05-03, 2,			1, 2),
-		(2020-05-03, 2, 		2, 1),
-		(2018-05-03, 2, 		3, 1),
-		(2017-05-03, 3, 		2, 1),
-		(2014-05-03, 3, 		5, 2),
-		(2014-05-03, 4, 		2, 2),
-		(2020-05-03, 4, 		4, 1),
-		(2014-05-03, 5, 		5, 3),
-		(2010-05-03, 5, 		2, 2),
-		(2010-05-03, 6, 		4, 1),
-		(2013-05-03, 7, 		5, 2);	
+
+		( 1,				1, 			"2019-01-01",				2),
+		( 2, 				1,			"2019-01-01",				2),			
+		( 3,				1, 			"2019-01-01",				2),
+		
+		( 1,				2, 			"2021-11-01", 				1),
+		
+		( 1, 				3,			"2017-11-01", 				3),			
+		( 2,				3, 			"2017-11-01", 				3),
+		( 3, 				3,			"2017-11-01", 				3),			
+		( 4,				3, 			"2017-11-01", 				3),
+		( 5, 				3,			"2017-11-01", 				3),
+		
+		( 1,				4, 			"2019-03-01", 				3),
+		( 2, 				4,			"2019-03-01", 				3),			
+		( 3,				4, 			"2019-03-01", 				3),
+		( 4, 				4,			"2019-03-01", 				3),			
+		( 5,				4, 			"2019-03-01", 				3),
+		( 6, 				4,			"2019-03-01", 				3);
+		
+
+		
 
 
 
