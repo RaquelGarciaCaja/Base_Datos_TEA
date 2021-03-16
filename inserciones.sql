@@ -5,11 +5,12 @@ USE BDTEA;
 INSERT INTO `100_TIPO_DE_PROFESIONALES`
 	( 100_idProfesional, 100_dniProfesional, 100_nomProfesional, 100_fechaNacimiento, 100_nomFichero, 100_sueldoBrutoAnual, 100_sexo )
 VALUES 
-	( null, 				"00000001A",			"María",			"1990-05-01", 		"img/001.png", 		"22000.00",			"0"),
-	( null, 				"00000002A",			"Alejandro", 		"1982-02-25",		"img/002.png", 		"25000.00", 		"1"),
-	( null, 				"00000003A",			"Josefa",			"1985-10-14", 		"img/003.png", 		"26000.00",			"0"),
-	( null, 				"00000004A",			"Rocío",			"1978-08-26", 		"img/004.png", 		"24000.00",			"0");
-	
+	( null, 				"00000001A",			"María",			"1990-05-01", 		"img/001.png", 		"31600.00",			"0"),
+	( null, 				"00000002A",			"Alejandro", 		"1982-02-25",		"img/002.png", 		"32200.00", 		"1"),
+	( null, 				"00000003A",			"Josefa",			"1985-10-14", 		"img/003.png", 		"30800.00",			"0"),
+	( null, 				"00000004A",			"Rocío",			"1978-08-26", 		"img/004.png", 		"35200.00",			"0"),
+	( null, 				"00000005A",			"Jorge",			"1985-05-31", 		"img/005.png", 		"31500.00",			"1");
+
 	
 	
 INSERT INTO `200_PERSONAS_CON_TEA`
@@ -18,7 +19,10 @@ VALUES
 	( null, 			"David", 	"Domínguez",		 "2015-05-11", 	"img/007.png", 		"1" 	),
 	( null, 			"Teresa", 	"Rodríguez",		 "2016-11-25", 	"img/008.png", 		"0" 	),
 	( null, 			"Adrián", 	"Fernández",		 "2015-12-30", 	"img/009.png", 		"1" 	),
-	( null, 			"Alberto", 	"Martínez",			 "2018-01-27", 	"img/010.png", 		"1" 	);
+	( null, 			"Alberto", 	"Martínez",			 "2018-01-27", 	"img/010.png", 		"1" 	),
+	( null, 			"Marta", 	"Moreno",			 "2017-04-20", 	"img/011.png", 		"0" 	),
+	( null, 			"Juan", 	"Jiménez",			 "2018-07-04", 	"img/012.png", 		"1" 	);
+
 	
 
 	
@@ -34,13 +38,13 @@ VALUES
 INSERT INTO `400_PROBLEMAS`
 	( 400_idProblema, 400_nomProblema, 400_descripcion )
 VALUES 	
-	( null, 	"Inflexibilidad", 			"blabla" ),  
-	( null,		"Lenguaje", 				"blabla" ),
-	( null, 	"Comunicación", 			"blabla" ),  
-	( null,		"Esteriotipias", 			"blabla" ),
-	( null,		"Sensibilida táctil", 		"blabla" ),
-	( null,	 	"Sensibilida auditiva",		"blabla" );
-
+	( null, 	"Inflexibilidad", 			"es la incapacidad para cambiar el pensamiento con facilidad" ),  
+	( null,		"Lenguaje", 				"habilidades del habla y del lenguaje que no corresponden al nivel de desarrollo normotipico" ),
+	( null, 	"Comunicación", 			"dificultad o poco interés por comunicarse y relacionarse con el entorno" ),  
+	( null,		"Esteriotipias", 			"movimientos, posturas o voces repetitivas o ritualizadas sin un fin determinado" ),
+	( null,		"Sensibilida táctil", 		"dificultad para procesar los estimulos táctiles" ),
+	( null,	 	"Sensibilida auditiva",		"dificultad para procesar los estimulos auditivos" ),
+	( null,	 	"Atención focalizada",		"dificultad para centrar el foco atencional en un estímulo" );
 	
 INSERT INTO `500_ACTIVIDADES`
 	( 500_idActividad, 500_nomActividad, 500_descripcion)
@@ -49,8 +53,11 @@ VALUES
 	( null,	 "puzzles", 						"blabla"  ),
 	( null,	 "Comprensión lectora",				"blabla"  ),
 	( null,	 "Uso de pictos", 					"blabla"  ),
-	( null,	 "Juegos con texturas y ruidos", 	"blabla"  );	
-	
+	( null,	 "Juegos con texturas y ruidos", 	"blabla"  ),	
+	( null,	 "Juego de parejas", 				"blabla"  ),
+	( null,	 "Laberintos", 						"blabla"  ),
+	( null,	 "Psiomotricidad",					"blabla"  );
+
 
 	
 
@@ -123,7 +130,11 @@ VALUES
 		( 3,				4, 			"2018-04-01"),
 		( 4, 				4,			"2018-04-01"),			
 		( 5,				4, 			"2018-12-01"),
-		( 6, 				4,			"2018-08-01");
+		( 6, 				4,			"2018-08-01"),
+		
+		( 4, 				6,			"2018-04-01"),			
+		( 5,				6, 			"2018-12-01"),
+		( 6, 				6,			"2018-08-01");
 		
 
 
@@ -146,10 +157,10 @@ VALUES
 		( 3, 				4,				3,				"2020-06-28 16:00:00",		 "blabla",			"3"),
 		
 		
-		( 4, 				1,				4,				"2020-11-07 17:00:00",		 "blabla",			"4"),
-		( 4, 				2,				4,				"2020-11-14 17:00:00",		 "blabla",			"4"),
-		( 4, 				3,				4,				"2020-11-21 17:00:00",		 "blabla",			"4"),
-		( 4, 				4,				4,				"2020-11-28 17:00:00",		 "blabla",			"4");
+		( 4, 				1,				4,				"2020-12-07 17:00:00",		 "blabla",			"4"),
+		( 4, 				2,				4,				"2020-12-14 17:00:00",		 "blabla",			"4"),
+		( 4, 				3,				4,				"2020-12-21 17:00:00",		 "blabla",			"4"),
+		( 4, 				4,				4,				"2020-12-28 17:00:00",		 "blabla",			"4");
 		
 
 
