@@ -1,5 +1,4 @@
-USE BDCoches;
- 
+USE BDTEA;
 	
 
 -- Query 1
